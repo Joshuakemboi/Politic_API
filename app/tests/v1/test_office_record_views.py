@@ -19,7 +19,7 @@ class TestOffice(unittest.TestCase):
 
 
     def get_office(self):
-        return testapp.get('/office/1)
+        return testapp.get('/office/1000)
 
     def test_get_office(self):
         response = self.get_office()
