@@ -17,7 +17,7 @@ class Test_test(unittest.TestCase):
         password=password,repeat_password=repeat_password),follow_redirects=True)
 
     def test_signup_valid_inputs(self):
-        response = self.signup(first_name='Hezron',second_name = "Kimutai",other_name = "chelimo",
+        response = self.signup(first_name='joshua',second_name = "Kimutai",other_name = "chelimo",
         email='kim@gmail.com',phone_number='+254799087221',passport_url = "passport.png",password='HHeezziiee1357&%',
         repeat_password='HHeezziiee1357&%')
         self.assertEqual(response.status_code,400)
