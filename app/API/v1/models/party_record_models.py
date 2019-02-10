@@ -1,10 +1,10 @@
 all_parties = [{
-    "party_id": 1,
+    "party_id": 1000,
     "party_name": "taken_party",
     "party_headquarters_address": "taken_hq",
     "party_logo_url": "present_party_logo.png"
 },{
-    "party_id": 2,
+    "party_id": 100,
     "party_name": "d-present_party2",
     "party_headquarters_address": "d-present_party_headquarters2",
     "party_logo_url": "d-present_party_logo.png"
@@ -39,6 +39,10 @@ class PartyRecord:
     #             update("party_headquarters_address",party_headquarters_address)
     #             update("party_logo_url",party_logo_url)
     #             return party
+
+
+
+         
 
 
 

@@ -14,7 +14,7 @@ admins = [{
         "first_name" : "Josh",
         "second_name" :"kemboi",
         "other_name" : "rop",
-        "email": "joshu@gmail.com",
+        "email": "josh@gmail.com",
         "phone_number": "0702983637",
         "passport_url": "url",
         "password": "Joshu455s*",
