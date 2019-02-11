@@ -1,3 +1,4 @@
+
 [![Build Status](https://travis-ci.org/Joshuakemboi/Politic_API.svg?branch=develop)](https://travis-ci.org/Joshuakemboi/Politic_API)
 
 # Politic_API
@@ -90,6 +91,5 @@ This project is licensed under the MIT license. See [LICENSE]( for details.
 Fork this repository, contribute, and create a pull request to this repo's gh-pages branch.
 
 ## Acknowledgements
-`
   -  Andela workshops.
   -  Andela Bootcamp Team 9members
