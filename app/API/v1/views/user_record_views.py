@@ -58,8 +58,8 @@ class SignupUser(Resource):
             return {"message":"Please make sure that your password contains atleast one upper case letter, one lower case ,a digit and atleast one character from %$& and #"},400
         if not valid_email:
             return {"message":"Please provide a valid email address"},400
-        if not phone_number.startswith('+254'):
-            return {"message":"A phone number should start with +254"},400
+        if not phone_number.startswith('07'):
+            return {"message":"A phone number should start with 07"},400
         if  repeat_password != password:
             return {"message":"The passwords you have provided don't match"},400
         user = UserRecord()
