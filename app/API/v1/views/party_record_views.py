@@ -33,18 +33,18 @@ class Party(Resource):
         party_name =party_args['party_name']
         party_headquarters_address =party_args['party_headquarters_address']
         party_logo =party_args['party_logo']
-        # if party_logo :
-        #     party_logo_url = secure_filename(party_logo.filename)
-        #     party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
-        # new_party = PartyRecord()
-        # parties = new_party.all_parties
-        # for party in parties:
-        #     if party_name in party.values() or party_headquarters_address in party.values():
-        #         return{"Status":400,"message":"Another party with similar credentials exist"},400
-        # party_logo_url = secure_filename(party_logo.filename)
-        # party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
-        # party = new_party.create_party(party_name,party_headquarters_address ,party_logo_url)
-        # return {"status":201,"message":"The party was successfully created"}, 201
+        if party_logo :
+            party_logo_url = secure_filename(party_logo.filename)
+            party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
+        new_party = PartyRecord()
+        parties = new_party.all_parties
+        for party in parties:
+            if party_name in party.values() or party_headquarters_address in party.values():
+                return{"Status":400,"message":"Another party with similar credentials exist"},400
+        party_logo_url = secure_filename(party_logo.filename)
+        party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
+        party = new_party.create_party(party_name,party_headquarters_address ,party_logo_url)
+        return {"status":201,"message":"The party was successfully created"}, 201
 
 
 class SingleParty(Resource):
@@ -65,7 +65,7 @@ class SingleParty(Resource):
         parties = new_party.all_parties
         for party in parties:
             if party_name in party.values() or party_headquarters_address in party.values():
-                return{"Status":400,"message":"Anothe rparty with similar credentials exist"},400
+                return{"Status":400,"message":"Another party with similar credentials exist"},400
         party_logo_url = secure_filename(party_logo.filename)
         party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
         update = new_party.update_party(party_id , party_name , party_headquarters_address , party_logo_url)
