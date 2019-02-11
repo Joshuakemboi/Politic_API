@@ -35,14 +35,14 @@ class TestParty(unittest.TestCase):
     def party_missing_fields(self):
         return testapp.post('/party',data=dict(),follow_redirects=True)
     def test_party_missing_fields(self):
-        response = self.party_mising_fields()
+        response = self.party_missing_fields()
         self.assertEqual(response.status_code,400)
 
    
     def party_edit_missing_fields(self):
         return testapp.put('/party/1000',data=dict(),follow_redirects=True)
     def test_party_edit_missing_fields(self):
-        response = self.party_edit_mising_fields()
+        response = self.party_edit_missing_fields()
         self.assertEqual(response.status_code,400)
 
    
