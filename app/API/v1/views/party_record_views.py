@@ -15,15 +15,15 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-# party_parser = reqparse.RequestParser()
-# party_parser.add_argument('party_logo', type=werkzeug.datastructures.FileStorage, location='files',required=True)
-# party_parser.add_argument('party_name', type=str, help='Enter party name', required=True)
-# party_parser.add_argument('party_headquarters_address', type=str, help='Repeat headquarters address' , required=True)
-
 party_parser = reqparse.RequestParser()
-party_parser.add_argument('party_logo', type=str, help='Enter party logo', required=True)
+party_parser.add_argument('party_logo', type=werkzeug.datastructures.FileStorage, location='files',required=True)
 party_parser.add_argument('party_name', type=str, help='Enter party name', required=True)
 party_parser.add_argument('party_headquarters_address', type=str, help='Repeat headquarters address' , required=True)
+
+# party_parser = reqparse.RequestParser()
+# party_parser.add_argument('party_logo', type=str, help='Enter party logo', required=True)
+# party_parser.add_argument('party_name', type=str, help='Enter party name', required=True)
+# party_parser.add_argument('party_headquarters_address', type=str, help='Repeat headquarters address' , required=True)
 
 class Party(Resource):
     
