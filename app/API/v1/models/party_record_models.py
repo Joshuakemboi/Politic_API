@@ -41,12 +41,6 @@ class PartyRecord:
                 return party
 
 
-
-         
-
-
-
-
     def get_all_parties(self):
         return self.all_parties
 

@@ -30,5 +30,5 @@ class SingleOffice(Resource):
 
 
 
-api.add_resource(SingleOffice, '/office/<int:office_id>')
-api.add_resource(Office, '/office')
+api.add_resource(SingleOffice, '/api/v1/office<int:office_id>')
+api.add_resource(Office, '/api/v1/office')

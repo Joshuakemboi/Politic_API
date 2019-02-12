@@ -1,6 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/Joshuakemboi/Politic_API/badge.svg?branch=develop)](https://coveralls.io/github/Joshuakemboi/Politic_API?branch=develop)
 [![Build Status](https://travis-ci.org/Joshuakemboi/Politic_API.svg?branch=develop)](https://travis-ci.org/Joshuakemboi/Politic_API)
-https://github.com/Joshuakemboi/Politic_API/blob/develop/LICENSE
 
 # Politic_API
 ## Summary
@@ -62,6 +61,39 @@ python3 run.py
 
 pytest
 
+## Deployment
+
+1.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/party
+
+2.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/office
+
+3.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/user
+
+## Party endpoints
+For the endpoint it only takes the following data
+
+  {
+
+   "party_logo_url":string,
+
+   "party_name":string,
+
+   "party_headquarters_address":string
+
+  }
+## office endpoints
+
+For the endpoint it only takes the following data
+
+  {
+
+    "office_name" : String, 
+
+    "office_type" : String
+  }
+
+
+
 ## Use Postman to test following working Endpoinsts
 
 
@@ -85,7 +117,7 @@ kemboijoshua- Github-[kemboijoshua](https://github.com/Joshuakemboi/Politic_API)
 
 ## License
 
-This project is licensed under the MIT license. See [LICENSE]( for details.
+This project is licensed under the MIT license. See [LICENSE](https://github.com/Joshuakemboi/Politic_API/blob/develop/LICENSE)
 
 ## Contribution
 
