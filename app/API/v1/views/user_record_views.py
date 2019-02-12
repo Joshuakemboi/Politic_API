@@ -66,4 +66,4 @@ class SignupUser(Resource):
         user = user.create_user(first_name ,second_name,other_name, email , phone_number,passport_url, password , repeat_password)
         return user, 201
 
-api.add_resource(SignupUser, '/signup')
+api.add_resource(SignupUser, '/user')

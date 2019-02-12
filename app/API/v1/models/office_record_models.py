@@ -1,7 +1,7 @@
 all_offices = [{
     "office_id": 2,
-    "office_type": "Default_office_type",
-    "office_name": "Default_office_name"
+    "office_type": "Presidency",
+    "office_name": "president"
 }]
 
 
