@@ -15,8 +15,13 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
+# party_parser = reqparse.RequestParser()
+# party_parser.add_argument('party_logo', type=werkzeug.datastructures.FileStorage, location='files',required=True)
+# party_parser.add_argument('party_name', type=str, help='Enter party name', required=True)
+# party_parser.add_argument('party_headquarters_address', type=str, help='Repeat headquarters address' , required=True)
+
 party_parser = reqparse.RequestParser()
-party_parser.add_argument('party_logo', type=werkzeug.datastructures.FileStorage, location='files',required=True)
+party_parser.add_argument('party_logo', type=str, help='Enter party logo', required=True)
 party_parser.add_argument('party_name', type=str, help='Enter party name', required=True)
 party_parser.add_argument('party_headquarters_address', type=str, help='Repeat headquarters address' , required=True)
 
@@ -32,19 +37,19 @@ class Party(Resource):
         party_args = party_parser.parse_args()
         party_name =party_args['party_name']
         party_headquarters_address =party_args['party_headquarters_address']
-        party_logo =party_args['party_logo']
+        party_logo_url =party_args['party_logo']
         # if party_logo :
         #     party_logo_url = secure_filename(party_logo.filename)
         #     party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
-        # new_party = PartyRecord()
-        # parties = new_party.all_parties
-        # for party in parties:
-        #     if party_name in party.values() or party_headquarters_address in party.values():
-        #         return{"Status":400,"message":"Another party with similar credentials exist"},400
+        new_party = PartyRecord()
+        parties = new_party.all_parties
+        for party in parties:
+            if party_name in party.values() or party_headquarters_address in party.values():
+                return{"Status":400,"message":"Another party with similar credentials exist"},400
         # party_logo_url = secure_filename(party_logo.filename)
         # party_logo.save(os.path.join(app.config['UPLOAD_FOLDER'], party_logo_url))
-        # party = new_party.create_party(party_name,party_headquarters_address ,party_logo_url)
-        # return {"status":201,"message":"The party was successfully created"}, 201
+        party = new_party.create_party(party_name,party_headquarters_address ,party_logo_url)
+        return {"status":201,"message":"The party was successfully created"}, 201
 
 
 class SingleParty(Resource):

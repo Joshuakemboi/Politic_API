@@ -27,18 +27,18 @@ class PartyRecord:
         if new_party:
             self.all_parties.append(new_party)
         return new_party
-    # def update_party(self,party_id , party_name , party_headquarters_address , party_logo_url):
-    #     for party in self.all_parties:
-    #         if party_id in party.values():
-    #             def update(key_to_find, definition):
-    #                 for key in party:
-    #                     if key == key_to_find:
-    #                         party[key] = definition
-    #             update("party_id",party_id)
-    #             update("party_name",party_name)
-    #             update("party_headquarters_address",party_headquarters_address)
-    #             update("party_logo_url",party_logo_url)
-    #             return party
+    def update_party(self,party_id , party_name , party_headquarters_address , party_logo_url):
+        for party in self.all_parties:
+            if party_id in party.values():
+                def update(key_to_find, definition):
+                    for key in party:
+                        if key == key_to_find:
+                            party[key] = definition
+                update("party_id",party_id)
+                update("party_name",party_name)
+                update("party_headquarters_address",party_headquarters_address)
+                update("party_logo_url",party_logo_url)
+                return party
 
 
 

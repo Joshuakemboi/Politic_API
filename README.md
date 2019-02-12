@@ -1,5 +1,6 @@
-
+[![Coverage Status](https://coveralls.io/repos/github/Joshuakemboi/Politic_API/badge.svg?branch=develop)](https://coveralls.io/github/Joshuakemboi/Politic_API?branch=develop)
 [![Build Status](https://travis-ci.org/Joshuakemboi/Politic_API.svg?branch=develop)](https://travis-ci.org/Joshuakemboi/Politic_API)
+https://github.com/Joshuakemboi/Politic_API/blob/develop/LICENSE
 
 # Politic_API
 ## Summary
