@@ -5,7 +5,7 @@ testapp = app.test_client()
 
 class TestOffice(unittest.TestCase):
     def office(self,office_type , office_name):
-        return testapp.post('/office',data=dict(office_type=office_type,
+        return testapp.post('/api/v1/office',data=dict(office_type=office_type,
         office_name = office_name),follow_redirects=True)
     def test_office_valid_input(self):
         response = self.office(office_type='federal',office_name = "Default_office_party" )
@@ -16,18 +16,18 @@ class TestOffice(unittest.TestCase):
         self.assertEqual(response.status_code,201)
 
     def office_missing_fields(self,office_type):
-        return testapp.post('/office',data=dict(office_type=office_type),follow_redirects=True)
+        return testapp.post('/api/v1/office',data=dict(office_type=office_type),follow_redirects=True)
     def get_office(self):
-        return testapp.get('/office/1000')
+        return testapp.get('/api/v1/office/1000')
 
     def get_missing_office(self):
-        return testapp.get('/office/999')
+        return testapp.get('/api/v1/office/999')
     def test_get_missing_office(self):
         response = self.get_missing_office()
         self.assertEqual(response.status_code,200)
 
     def get_offices(self):
-        return testapp.get('/office')
+        return testapp.get('/api/v1/office')
     def test_get_office(self):
         response = self.get_office()
         self.assertEqual(response.status_code, 200)

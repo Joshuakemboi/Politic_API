@@ -63,11 +63,11 @@ pytest
 
 ## Deployment
 
-1.https://joshpoliticapi-api-heroku.herokuapp.com/party
+1.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/party
 
-2.https://joshpoliticapi-api-heroku.herokuapp.com/office
+2.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/office
 
-3.https://joshpoliticapi-api-heroku.herokuapp.com/user
+3.https://joshpoliticapi-api-heroku.herokuapp.com/api/v1/user
 
 ## Party endpoints
 For the endpoint it only takes the following data

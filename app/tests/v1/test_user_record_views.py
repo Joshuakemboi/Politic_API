@@ -6,13 +6,13 @@ testapp = app.test_client()
 
 class Test_test(unittest.TestCase):
     def user(self,first_name,second_name,other_name,email,phone_number,passport_url,password,repeat_password):
-        return testapp.post('/user',data=dict(first_name=first_name,
+        return testapp.post('/api/v1/user',data=dict(first_name=first_name,
         second_name = second_name , other_name = other_name,email=email,
         phone_number=phone_number,passport_url = passport_url ,password=password,
         repeat_password=repeat_password),follow_redirects=True)
 
     def user_missing_fields(self,first_name,second_name,other_name,email,password,repeat_password):
-        return testapp.post('/user',data=dict(first_name=first_name,
+        return testapp.post('/api/v1/user',data=dict(first_name=first_name,
         second_name = second_name , other_name = other_name,email=email,
         password=password,repeat_password=repeat_password),follow_redirects=True)
 
