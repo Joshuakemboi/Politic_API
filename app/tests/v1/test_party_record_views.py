@@ -7,7 +7,7 @@ testapp = app.test_client()
 class TestParty(unittest.TestCase):
     def party(self,party_name , party_headquarters_address ,party_logo_url):
         return testapp.post('/api/v1/party',data=dict(party_name=party_name,
-         party_headquarters_address = party_headquarters_address, party_logo_url = party_logo_url),follow_redirects=True)
+         party_headquarters_address = party_headquarters_address, party_logo_url = party_logo_url),follow_redirects=True )
     def test_valid_inputs(self):
         response = self.party(party_name='jubilee',party_headquarters_address = "jossgmail",party_logo_url = "lion")
         self.assertEqual(response.status_code,201)
